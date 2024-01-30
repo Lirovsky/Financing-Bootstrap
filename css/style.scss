@@ -1,0 +1,219 @@
+$primary:       #fff;
+$secondary:     #306EE8;
+$success:       #7a8f99;
+
+$navbar-toggler-padding-y:          .5rem;
+$navbar-toggler-padding-x:          1.25rem;
+$navbar-dark-hover-color:           #fff;
+$navbar-dark-toggler-border-color:  #fff;
+
+$dropdown-bg:                       #fff;
+$dropdown-link-color:               #000;
+$dropdown-link-hover-color:         #306EE8;
+$dropdown-link-hover-bg:            transparent;
+
+$card-border-color:                 transparent;
+
+$carousel-indicator-height:          4px;
+$carousel-indicator-opacity:         .6;
+$carousel-indicator-active-bg:       $success;
+// OWL
+$nav-background: 		#306EE8;
+$nav-background-hover:	#6d9dff;
+$nav-margin: 			0;
+$nav-padding: 			6px 10px;
+$nav-font-size: 		12px;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import '../owl/src/scss/theme.default';
+@import 'animate.css';
+
+:root {
+    --animate-delay: 0.2s;
+}
+%hover1 {
+    background-color: transparent;
+    // margin: 5px;
+    border: #fff;
+    color: #fff;
+    transition: all .5s;
+}
+%hover2 {
+    background-color: #306EE8;
+    color: #fff;
+    transition: all .5s;
+}
+%link-footer {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+    }
+}
+%btn1 {
+    color: #306EE8;
+    &:hover {
+        @extend %hover1;
+    }
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+#section-1 {
+    height: 100%;
+    background-color: #306EE8;
+    background-image: url("../img/blob.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: .2rem;
+        color: #000;
+    }
+    .phone {
+        i {
+            padding: 10px 14px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid transparent;
+            transition: all .5s;
+            &:hover {
+                background-color: transparent;
+                border: 2px solid #fff;
+            }
+        }
+        p {
+            margin-top: 18px;
+        }
+    }
+    .container {
+        .links {
+            .contact {
+                @extend %btn1;
+            }
+            .video {
+                transition: all .5s;
+                &:hover {
+                    color: rgba(255, 255, 255, 0.55);
+                }
+            }
+        }
+    }
+}
+#section-2, #section-4 {
+    .bi {
+        font-size: 24px;
+    }
+}
+#section-3, #section-5 {
+    .bi {
+        font-size: 45px;
+    }
+}
+#section-5, #section-10 {
+    .btn {
+        color: #306ee8;
+        border-color: #306EE8;
+        &:hover {
+            @extend %hover2;
+        }
+    }
+}
+#section-6 {
+    background: linear-gradient(rgba(48, 110, 232, .8), rgba(48, 110, 232, .9)), url(../img/hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .btn {
+        @extend %btn1;
+    }
+}
+#section-9 {
+    a {
+        color: #306EE8;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    // Page Blog
+    .custom-navigation {
+        a {
+            color: #306EE8;
+            text-decoration: none;
+            border-radius: 50%;
+            padding: 15px 20px;
+            &:hover {
+                background-color: #306EE8;
+                color: #fff;
+            }
+        }
+        .active {
+            background-color: #306EE8;
+            color: #fff;
+        }
+    }
+}
+#footer {
+    li {
+        padding-bottom: 10px;
+        a {
+            @extend %link-footer;
+        }
+    }
+    h3 {
+        font-size: 18px;
+    }
+    i {
+        padding: 8px 10px;
+        margin-right: 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+        &:hover {
+            background-color: #fff;
+            color: #306EE8;
+        }
+    }
+    .end {
+        a {
+            @extend %link-footer;
+        }
+    }
+}
+#section-10 {
+    .showcase-img {
+        min-height: 20rem;
+        background-size: cover;
+        background-position: center;
+    }
+}
+#section-11 {
+    i {
+        padding: 10px 14px;
+        background-color: #306EE8;
+        border-radius: 50%;
+    }
+}
+#section-12 {
+
+    h3 {
+        font-size: 16px;
+    }
+    i {
+        padding: 10px 14px;
+        border-radius: 50%;
+        border: 1px solid $success;
+        color: #000;
+    }
+    .sticky {
+        position: inherit;
+    }
+    @media (min-width: 992px) {
+        .sticky {
+            position: sticky;
+            top: 0;
+        }
+    }
+}
